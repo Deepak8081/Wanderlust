@@ -105,3 +105,7 @@ app.use((err,req,res,next)=>{
     res.status(statusCode).render("./listings/error.ejs",{message})
     res.status(statusCode).send(message);
     });
+
+app.listen(8080, () => {
+     console.log("server is live")
+})
