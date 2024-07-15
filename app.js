@@ -23,7 +23,6 @@ const User = require("./models/user.js");
 
 
 const dbUrl = process.env.ATLASDB_URL;
-// const MONGO_URL='mongodb://127.0.0.1:27017/wanderlust'
 async function main() {
     await mongoose.connect(dbUrl);
 }
@@ -64,12 +63,6 @@ const sessionOptions = {
     }
 }
 
-
-// app.get("/", (req, res) => {
-//     res.send("hi i am here");
-// });
-
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -91,11 +84,13 @@ app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter)
 app.use("/", userRouter)
 
+app.use("/", (req, res) => {
+    res.redirect("/listings")
+})
+
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found!"));
 })
-
-
 
 app.use((err, req, res, next) => {
     let { statusCode = 500, message = "Something went wrong!" } = err;
