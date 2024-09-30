@@ -136,7 +136,7 @@ A huge thank you to **Shradha Khapra** ma'am and **Aman Dhattarwal** bhaiya from
 ---
 
 ## Author
-**Kshitij**  
+**Deepak**  
 - LinkedIn: [Deepak Profile](https://www.linkedin.com/in/deepak-chakravarti-1a5915256/)
 - GitHub: [Deepak GitHub](https://github.com/Deepak8081)
 
